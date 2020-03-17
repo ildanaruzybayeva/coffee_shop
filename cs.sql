@@ -59,8 +59,10 @@ VALUES
 INSERT INTO staff
     (first_name, last_name, personal_number, contact, address_info, salary, sex, bdate, employment_date, contract_type, title)
 VALUES
-    ('Ildana', 'Ruzybayeva', 9511148166, '0760759618', 'Malmo', 120, 'F', '1995-11-14', '2019-07-01', 'Full-time', 'Barista'),
-    ('Alva', 'Rosqvist', 9511148166, '07564315', 'Malmo', 120, 'F', '1993-08-14', '2019-04-01', 'Part-time', 'Barista');
+    ('John', 'Doe', 9052631485, '0760759618', 'Malmo', 30000, 'M', '1990-11-14', '2018-01-01', 'Full-time', 'Boss'),
+    ('Adam', 'Adamson', 9511148166, '0760759618', 'Malmo', 22000, 'M', '1995-11-14', '2018-01-01', 'Full-time', 'Barista'),
+    ('Ildana', 'Ruzybayeva', 874065056, '0760759618', 'Malmo', 22000, 'F', '1987-11-14', '2019-05-01', 'Full-time', 'Barista'),
+    ('Alva', 'Rosqvist', 6698751124, '07564315', 'Malmo', 15000, 'F', '1966-08-14', '2019-07-01', 'Part-time', 'Barista');
 
 
 INSERT INTO drinks_menu
