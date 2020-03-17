@@ -87,3 +87,9 @@ VALUES
     ('Ham and Cheese grilled sandwich', 67, 'sandwich', false),
     ('Granola youghurt', 29, 'youghurt', false),
     ('Egg sandwich', 45, 'sandwich', false);
+
+
+
+    ///Calculating Monthly & Yearly Salaries
+    SELECT SUM(salary) FROM staff AS total_monthly_salaries;
+    SELECT SUM(salary)*12 FROM staff AS total_yearly_salaries;
