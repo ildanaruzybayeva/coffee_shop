@@ -114,7 +114,7 @@ VALUES
     JOIN food_category
     ON food_menu.food_category = food_category.category_name;
 
-    
     --Calculating Monthly & Yearly Salaries
     SELECT SUM(salary) FROM staff AS total_monthly_salaries;
     SELECT SUM(salary)*12 FROM staff AS total_yearly_salaries;
+    
