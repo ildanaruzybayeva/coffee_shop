@@ -47,12 +47,20 @@ CREATE TABLE food_menu
     is_vegan BOOLEAN NOT NULL
 );
 
+DROP TABLE IF EXISTS food_category;
+CREATE TABLE food_category
+(
+    category_id SERIAL PRIMARY KEY,
+    category_name VARCHAR(100) NOT NULL,
+    category_description VARCHAR(100) NOT NULL
+);
+
 
 INSERT INTO purchase
     (purchase_price, purchase_method, purchase_date, purchase_from_member, purchase_type, purchase_items)
 VALUES
     (250, 'card', '2016-06-22 19:10:25-07', false, 'breakfast combo', 'coffee and cheese sandwich'),
-    (99, 'card', now(), true, 'lunch combo', 'soup and tea'),
+    (99, 'card', '2019-01-05', true, 'lunch combo', 'soup and tea'),
     (50, 'swish', '2017-06-22 19:10:25-07', true, 'lunch combo', 'soup and tea');
 
 
@@ -89,7 +97,21 @@ VALUES
     ('Egg sandwich', 45, 'sandwich', false);
 
 
+INSERT INTO food_category
+    (category_name, category_description)
+VALUES
+    ('salad', 'four types of salads based on shrimps, oumph, chicken and halloumi'),
+    ('sandwich', 'grilled sandwiches, rolls and bagels'),
+    ('youghurt', 'granola and nuts options'),
+    ('fika', 'chocolate, gluten-free, milk-free, sugar-free');
 
-    ///Calculating Monthly & Yearly Salaries
+
+    --Calculating Monthly & Yearly Salaries
     SELECT SUM(salary) FROM staff AS total_monthly_salaries;
-    SELECT SUM(salary)*12 FROM staff AS total_yearly_salaries;
+    SELECT SUM(salary*12) FROM staff AS total_yearly_salaries;
+
+    --Linking food_menu and food_category 
+    SELECT * 
+    FROM food_menu
+    JOIN food_category
+    ON food_menu.food_category = food_category.category_name;
