@@ -94,6 +94,8 @@ VALUES
     ('Hummus-Roll', 49, 'sandwich', true),
     ('Ham and Cheese grilled sandwich', 67, 'sandwich', false),
     ('Granola youghurt', 29, 'youghurt', false),
+    ('Cheescake', 39, 'fika', false),
+    ('Carrots cake', 35, 'fika', false),
     ('Egg sandwich', 45, 'sandwich', false);
 
 
