@@ -56,6 +56,7 @@ ON food_products.category_id = food_categories.id;
 
 --Create a query that show the sum of the costs of the products that belong to a category choosen by name
 
+CREATE VIEW total_sum AS
 SELECT COUNT(*) AS quantity, 
        SUM(price) AS total
 FROM food_products
