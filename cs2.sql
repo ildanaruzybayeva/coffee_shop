@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS "food_products"
     "id" SERIAL PRIMARY KEY,
     "name" VARCHAR(100) NOT NULL,
     "price" INTEGER NOT NULL,
-    "category_id" INTEGER NOT NULL,
+    "category_id" INTEGER REFERENCES food_categories(id) NOT NULL,
     "is_vegan" BOOLEAN NOT NULL
 );
 
@@ -50,3 +50,6 @@ FROM food_products
 JOIN food_categories
 ON food_products.category_id = food_categories.id;
 
+--When inserting a new product, it should throw an error if the category does not exists
+
+--FOREIGN_KEY INTEGER REFERENCES target_table(PRIMARY_KEY) NOT NULL
