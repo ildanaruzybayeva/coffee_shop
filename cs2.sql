@@ -53,3 +53,14 @@ ON food_products.category_id = food_categories.id;
 --When inserting a new product, it should throw an error if the category does not exists
 
 --FOREIGN_KEY INTEGER REFERENCES target_table(PRIMARY_KEY) NOT NULL
+
+--Create a query that show the sum of the costs of the products that belong to a category choosen by name
+
+CREATE VIEW total_sum AS
+SELECT COUNT(*) AS quantity, 
+       SUM(price) AS total
+FROM food_products
+JOIN food_categories
+ON food_products.category_id = food_categories.id
+WHERE category = 'sandwich'
+ORDER BY COUNT(*);
